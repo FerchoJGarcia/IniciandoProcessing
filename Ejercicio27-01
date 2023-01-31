@@ -1,0 +1,96 @@
+void setup(){
+  size(1000,500);
+}
+
+void draw(){
+  background(255);
+  carro();
+  computadora();
+  persona();
+}
+
+//carro
+void carro(){
+  beginShape();
+    fill(0,100,175);
+    vertex(150,350);
+    vertex(150,315);
+    vertex(200,315);
+    vertex(225,270);
+    vertex(300,270);
+    vertex(325,315);
+    vertex(380,315);
+    vertex(410,350);
+    vertex(150,350);
+  endShape();
+  
+  //ventana
+  beginShape();
+    fill(250,250,250);
+    vertex(209,315);
+    vertex(230,278);
+    vertex(295,278);
+    vertex(315,315);
+  endShape();
+  
+  //llantas
+  fill(0);
+  ellipse(200, 350, 50, 50);
+  ellipse(350, 350, 50, 50);
+}
+
+//Computadora
+void computadora(){
+  beginShape();
+    fill(0,0,0);
+    vertex(100,50);
+    vertex(100,100);
+    vertex(200,100);
+    vertex(200,50);
+  endShape();
+  
+  //pantalla
+  beginShape();
+    fill(100,100,100);
+    vertex(105,55);
+    vertex(105,95);
+    vertex(195,95);
+    vertex(195,55);
+  endShape();
+  
+  beginShape();
+    fill(0,0,0);
+    vertex(110,125);
+    vertex(135,100);
+    vertex(165,100);
+    vertex(190,125);
+  endShape();
+}
+
+//persona
+void persona(){
+  //cabeza
+  beginShape();
+    fill(247,190,178);
+    ellipse(550, 100, 80, 80);
+  endShape();
+  
+  //cuerpo
+  beginShape();
+    fill(0,50,100);
+    rect(490, 140, 120, 150);
+  endShape();
+  
+  //sonrisa
+  beginShape();
+    fill(255);
+    arc(550, 115, 35, 35, 0, PI, CHORD);
+  endShape();
+  
+  //ojos
+  beginShape();
+    fill(0,0,0);
+    ellipse(538, 90, 10, 10);
+    ellipse(563, 90, 10, 10);
+  endShape();
+}
